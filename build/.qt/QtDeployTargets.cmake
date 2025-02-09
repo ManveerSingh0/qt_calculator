@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_qt_widgets_FILE /home/manveer/programming/qt_applications/learning/build/qt_widgets)
+set(__QT_DEPLOY_TARGET_qt_widgets_TYPE EXECUTABLE)

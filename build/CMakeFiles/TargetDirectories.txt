@@ -1,0 +1,5 @@
+/home/manveer/programming/qt_applications/learning/build/CMakeFiles/qt_widgets.dir
+/home/manveer/programming/qt_applications/learning/build/CMakeFiles/edit_cache.dir
+/home/manveer/programming/qt_applications/learning/build/CMakeFiles/rebuild_cache.dir
+/home/manveer/programming/qt_applications/learning/build/CMakeFiles/qt_widgets_autogen_timestamp_deps.dir
+/home/manveer/programming/qt_applications/learning/build/CMakeFiles/qt_widgets_autogen.dir
