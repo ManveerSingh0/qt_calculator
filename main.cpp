@@ -1,11 +1,22 @@
+#include <iostream>
 #include <QtWidgets>
 
-int main(int argc, char *argv[]){
+
+
+int main(int argc, char *argv[]) {
   QApplication app(argc, argv);
   QWidget window;
-  window.resize(320, 240);
+  window.resize(230, 240);
+  window.setWindowTitle(QApplication::translate("Calculator",
+                                                "Manveer Singh"));
   window.show();
-  window.setWindowTitle(
-      QApplication::translate("qt", "Manveer Singh"));
+
+
+  QPushButton *button = new QPushButton(
+      QApplication::translate("childwidget", "Press Me"), &window);
+
+  button->move(100, 100);
+  button->show();
+
   return app.exec();
 }
