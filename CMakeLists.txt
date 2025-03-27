@@ -15,11 +15,11 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 qt_standard_project_setup()
 
-add_executable(qt_widgets main.cpp)
+add_executable(qt_widgets main.cpp calculator.h calculator.cpp)
 
-# if(WIN32)
-  set(CMAKE_PREFIX_PATH "E:\\Qt\\6.10.0\\mingw_64\\lib\\cmake")
-# endif()
+# # if(WIN32)
+#   set(CMAKE_PREFIX_PATH "E:\\Qt\\6.10.0\\mingw_64\\lib\\cmake")
+# # endif()
 
 
 target_link_libraries(qt_widgets PRIVATE Qt6::Core Qt6::Widgets)
