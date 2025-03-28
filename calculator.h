@@ -3,7 +3,7 @@
 
 #include <QWidget>
 #include <QLineEdit>
-
+#include <QGridLayout>
 
 class Calculator : public QWidget{
   Q_OBJECT
@@ -15,7 +15,7 @@ class Calculator : public QWidget{
 
  private:
   QLineEdit* line_edit;
-
+  QGridLayout* grid;
 
 };
 
