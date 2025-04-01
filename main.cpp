@@ -1,16 +1,11 @@
 #include "calculator.h"
-
-
-#include <iostream>
-#include <QApplication>
+#include <QCoreApplication>
 
 
 
 int main(int argc, char *argv[]) {
-  QApplication app(argc, argv);
-  Calculator window;
-  window.show();
+    QCoreApplication app(argc, argv);
 
-  return app.exec();
 
+    return app.exec();
 }

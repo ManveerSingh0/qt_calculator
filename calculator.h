@@ -2,21 +2,15 @@
 #define CALCULATOR_H
 
 #include "button.h"
-
-
-
 #include <QWidget>
-#include <QToolButton>
 #include <QLineEdit>
-#include <QFont>
 #include <QGridLayout>
 
-class Calculator : public QWidget{
-  Q_OBJECT
+class Calculator : public QWidget {
+    Q_OBJECT
 public:
-  Calculator(QWidget* parent = nullptr);
-  ~Calculator();
-
+    Calculator(QWidget* parent = nullptr);
+    ~Calculator() = default;
 
 private slots:
     void digitClicked();
@@ -34,35 +28,21 @@ private slots:
     void setMemory();
     void addToMemory();
 
-
-
-
 private:
+    Button* createButton(const QString &text, const char* member);
+    void abortOperation();
+    bool calculate(double rightOperand, const QString &pendingOperator);
 
-   template <class pointerToMemberFunction>
-   Button* createButton(const QString &text, const pointerToMemberFunction& member);
-  void abortOperation();
-  bool calculate(double rightOperand, const QString &pendingOperator);
+    double sumInMemory;
+    double sumSoFar;
+    double factorSoFar;
+    QString pendingAdditiveOperator;
+    QString pendingMultiplicativeOperator;
+    bool waitingForOperand;
 
-  //Variable which contain calculated data and when to clear that data
-  double sumInMemory;
-  double sumSoFar;
-  double factorSoFar;
-  QString pendingAdditiveOperator;
-  QString pendingMultiplicativeOperator;
-  bool waitingForOperand;
-
-
-  //this will be used in creating buttons from 0-9 in calculator 
-  QLineEdit* display;
-  QFont font; 
-  enum {
-    NumDigitButtons = 10
-  };
-  
-  Button* digitButtons[NumDigitButtons];
+    QLineEdit* display;
+    enum { NumDigitButtons = 10 };
+    Button* digitButtons[NumDigitButtons];
 };
 
-
 #endif
-
