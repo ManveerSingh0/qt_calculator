@@ -1,11 +1,6 @@
-#include "calculator.h"
-#include <QCoreApplication>
-
+#include <print>
 
 
 int main(int argc, char *argv[]) {
-    QCoreApplication app(argc, argv);
-
-
-    return app.exec();
+  std::println("Hello World");
 }
